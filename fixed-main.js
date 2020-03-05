@@ -13,7 +13,7 @@ async function main(shouldFailed) {
 }
 
 // Random　Success or failure
-main(Math.random() < 0.5).then(() => {
+main(Math.random() < 0.6).then(() => {
     console.log("ok");
     // It is optional - if comment out is, node.js get same result
     process.exit(0); 

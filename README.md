@@ -2,12 +2,15 @@
 
 Example of Unhandled Rejection.
 
-## Usage
+## Problem Code
+
+Unhandled Rejection make status code `0` 
 
 Run:
 
 ```
 npm start
+echo $? # 0
 ```
 
 Code:
@@ -30,6 +33,51 @@ async function main(shouldFailed) {
 // Random　Success or failure
 main(Math.random() < 0.5);
 ```
+
+## Fix Code
+
+Run:
+
+```
+npm run fixed-start
+echo $? # 0 or 1
+```
+
+Code:
+
+```js
+function waitFor(ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms);
+    });
+}
+
+async function main(shouldFailed) {
+    await waitFor(1000);
+    if (!shouldFailed) {
+        return; // sucess after 2sec        
+    }
+    throw new Error("ERRRRRRR!"); // failed after 2sec
+}
+
+// Random　Success or failure
+main(Math.random() < 0.6).then(() => {
+    console.log("ok");
+    // It is optional - if comment out is, node.js get same result
+    process.exit(0); 
+}).catch(error => {
+    console.error(error);
+    process.exit(1);
+});
+```
+
+Should `catch` and call `process.exit` with expected status code
+
+## Related
+
+- https://github.com/sindresorhus/loud-rejection
+- https://github.com/sindresorhus/hard-rejection
+
 ## Changelog
 
 See [Releases page](https://github.com/azu/unhandled-reject-example/releases).
