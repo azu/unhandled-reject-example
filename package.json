@@ -23,6 +23,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "node main.js"
+    "start": "node main.js",
+    "fixed-start": "node fixed-main.js"
   }
 }
