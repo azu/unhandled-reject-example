@@ -1,0 +1,28 @@
+{
+  "name": "unhandled-reject-example",
+  "version": "1.0.0",
+  "description": "Example of Unhandled Rejection.",
+  "homepage": "https://github.com/azu/unhandled-reject-example",
+  "bugs": {
+    "url": "https://github.com/azu/unhandled-reject-example/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/unhandled-reject-example.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/unhandled-reject-example.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node main.js"
+  }
+}
