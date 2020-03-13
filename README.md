@@ -9,7 +9,7 @@ Unhandled Rejection make status code `0`
 Run:
 
 ```
-npm start
+npm run start
 echo $? # 0
 ```
 
