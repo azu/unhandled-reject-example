@@ -1,14 +1,14 @@
 {
-  "name": "unhandled-reject-example",
+  "name": "unhandled-rejections-example",
   "version": "1.0.0",
   "description": "Example of Unhandled Rejection.",
-  "homepage": "https://github.com/azu/unhandled-reject-example",
+  "homepage": "https://github.com/azu/unhandled-rejections-example",
   "bugs": {
-    "url": "https://github.com/azu/unhandled-reject-example/issues"
+    "url": "https://github.com/azu/unhandled-rejections-example/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/azu/unhandled-reject-example.git"
+    "url": "https://github.com/azu/unhandled-rejections-example.git"
   },
   "license": "MIT",
   "author": "azu",
@@ -17,7 +17,7 @@
     "lib/",
     "src/"
   ],
-  "main": "lib/unhandled-reject-example.js",
+  "main": "lib/unhandled-rejections-example.js",
   "directories": {
     "lib": "lib",
     "test": "test"

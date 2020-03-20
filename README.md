@@ -1,6 +1,6 @@
-# unhandled-reject-example
+# unhandled-rejections-example
 
-Example of Unhandled Rejection.
+Example wrong usage of Unhandled Rejections. Make exit status 1.
 
 ## Problem Code
 
@@ -66,14 +66,26 @@ main().then(() => {
 
 Should `catch` and call `process.exit` with expected status code
 
+## Another solusions: `--unhandled-rejections=strict`
+
+Node.js 12+ implement `--unhandled-rejections=mode` flag.
+
+`--unhandled-rejections=strict` Raise the unhandled rejection as an uncaught exception.
+
+```
+node --unhandled-rejections=strict main.js
+echo $? # 1
+```
+
 ## Related
 
+- https://github.com/mcollina/make-promises-safe
 - https://github.com/sindresorhus/loud-rejection
 - https://github.com/sindresorhus/hard-rejection
 
 ## Changelog
 
-See [Releases page](https://github.com/azu/unhandled-reject-example/releases).
+See [Releases page](https://github.com/azu/unhandled-rejections-example/releases).
 
 ## Running tests
 
@@ -85,7 +97,7 @@ Install devDependencies and Run `npm test`:
 
 Pull requests and stars are always welcome.
 
-For bugs and feature requests, [please create an issue](https://github.com/azu/unhandled-reject-example/issues).
+For bugs and feature requests, [please create an issue](https://github.com/azu/unhandled-rejections-example/issues).
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
